@@ -1,0 +1,160 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topBar{
+  width:100%;
+  background:#0085ff;
+  height:100rpx;
+}
+
+.topBar .location{
+  overflow:hidden;
+}
+
+.iconSlide{
+  width:100%;
+  background:#fff;
+  height:400rpx;
+}
+
+.iconSlide .singleItem{
+  float:left;
+  width:25%;
+  display:flex;
+	flex-direction: column;
+  margin-top:20rpx;
+}
+
+.iconSlide .singleItem image{
+  width:100rpx;
+  height:100rpx;
+  margin: 0 auto;
+}
+
+.iconSlide .singleItem text{
+  text-align: center;
+  font-size:32rpx;
+}
+
+.hotbag{
+  background:#fff;
+}
+
+.hotbag image{
+  width:96%;
+  height:200rpx;
+  margin:0 auto;
+  display:block;
+}
+
+.main .business{
+  margin-top:30rpx;
+  text-align:center;
+  width:100%;
+  font-size:32rpx;
+  display: block;
+  height:100rpx;
+  line-height:100rpx;
+  background:#fff;
+}
+
+.main{
+  background:#fff;
+  overflow:hidden;
+}
+
+.main .list{
+  width:96%;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.main .list .listItem{
+  overflow:hidden;
+  margin-bottom:40rpx;
+}
+
+.main .list view .listImg{
+  width:200rpx;
+  height:200rpx;
+  float:left;
+  margin-right:30rpx;
+}
+
+.main .list view .right{
+  float:left;
+  width:60%
+}
+
+.main .list view .right .name{
+  font-size:32rpx;
+}
+
+.main .list view .right .info{
+  font-size:24rpx;
+  display:flex;
+  justify-content:space-between;
+  margin-top:12rpx;
+}
+.main .list view .right .info .send{
+  color:#fff;
+  background:#0085ff;
+  border-radius:6rpx;
+}
+
+.main .list view .right .prise{
+  border-bottom:1px dashed #999;
+}
+
+.main .list view .right .prise text{
+  margin-bottom:34rpx;
+}
+
+.main .endAll{
+  width:100%;
+  text-align:center;
+  padding:20rpx 0;
+}
+
+
+
+
+
+
+
+
+
+.topBar .location text{
+  color:#fff;
+  font-size:32rpx;
+  width:200rpx;
+  height:40rpx;
+  line-height:40rpx;
+  padding:40rpx 0 0 40rpx;
+  float:left;
+}
+
+.topBar .location image{
+  width:32rpx;
+  height:32rpx;
+  float:left;
+  padding-top:40rpx;
+}
+/* .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */

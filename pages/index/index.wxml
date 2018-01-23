@@ -56,4 +56,22 @@
       </view>
     </view>
   </scroll-view> 
+  <view class="table">
+    <view>
+      <image src='../img/moto.png'></image>
+      <text>外卖</text>
+    </view>
+      <view>
+      <image src='../img/find.png'></image>
+      <text>发现外卖</text>
+    </view>
+     <view>
+      <image src='../img/page.png'></image>
+      <text>订单</text>
+    </view>
+     <view>
+      <image src='../img/person.png'></image>
+      <text>我的</text>
+    </view> 
+  </view>
 </view>

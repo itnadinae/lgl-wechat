@@ -1,5 +1,7 @@
 /**index.wxss**/
-@import "../template/takefood/takefood.wxss"
+@import "../template/takefood/takefood.wxss";
+@import "../template/find/find.wxss";
+
 
 .userinfo {
   display: flex;

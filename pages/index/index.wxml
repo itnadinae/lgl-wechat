@@ -1,8 +1,10 @@
 <!--index.wxml-->
-<import src="../template/takefood/takefood.wxml"/>
+<!-- <import src="../template/takefood/takefood.wxml"/> -->
+<import src="../template/find/find.wxml"/>
 
 <view class="container">
-  <template is="{{name}}" data="{{...item}}"></template>
+  <!-- <template is="{{name}}" data="{{...item}}"></template> -->
+  <template is="{{name}}"></template>
   <view class="table">
     <view bindtap='getMoto'>
       <image src='../img/moto.png'></image>

@@ -1,0 +1,25 @@
+.find .recom .mall{
+  color:rgb(255, 153, 0);
+  font-size:40rpx;
+}
+
+.find .recom .free{
+  color:#999;
+  font-size:32rpx;
+}
+
+.find .recom image{
+  width:150rpx;
+  height:150rpx;
+}
+
+
+
+
+
+
+
+
+
+
+

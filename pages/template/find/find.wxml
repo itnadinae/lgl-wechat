@@ -1,5 +1,21 @@
 <template name="find">
-  <view>
-    
+  <view class="find">
+    <div class="recom">
+      <div>
+        <div>
+          <view class="mall">金币商城</view>
+          <view class="free">0元好物在这里</view>
+          <view>
+            <image src="../img/gold.jpeg"></image>
+          </view>
+        </div>
+        <div></div>
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </view>
 </template>

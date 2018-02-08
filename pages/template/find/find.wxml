@@ -1,21 +1,53 @@
 <template name="find">
   <view class="find">
-    <div class="recom">
-      <div>
-        <div>
+    <view class="recom">
+      <view class="goldmall">
+        <view class="top">
           <view class="mall">金币商城</view>
           <view class="free">0元好物在这里</view>
-          <view>
+          <view class="img">
             <image src="../img/gold.jpeg"></image>
           </view>
-        </div>
-        <div></div>
-      </div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+        </view>
+        <view class="bottom">
+          <view class="left">
+            <view class="mall">金币商城</view>
+            <view class="free">0元好物在这里</view>
+          </view>
+          <view class="right">
+            <image src="../img/dis.jpeg"></image>
+          </view>
+        </view>
+      </view>
+      <view class="redbag">
+        <view class="bottom">
+          <view class="left">
+            <view class="mall">金币商城</view>
+            <view class="free">0元好物在这里</view>
+          </view>
+          <view class="right">
+            <image src="../img/dis.jpeg"></image>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="left">
+            <view class="mall">金币商城</view>
+            <view class="free">0元好物在这里</view>
+          </view>
+          <view class="right">
+            <image src="../img/dis.jpeg"></image>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="left">
+            <view class="mall">金币商城</view>
+            <view class="free">0元好物在这里</view>
+          </view>
+          <view class="right">
+            <image src="../img/dis.jpeg"></image>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>

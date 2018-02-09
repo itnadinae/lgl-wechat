@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    name:'find',
+    name:'page',
     item: {
       mapName: '点击进行定位2',
       imgUrl: [
@@ -204,6 +204,7 @@ Page({
       }
     })
   },
+
   onLoad: function(options) {
     wx.setNavigationBarTitle({
       title: '我的个人网站',
@@ -242,6 +243,29 @@ Page({
   getMoto:function(){
     this.setData({
       name:'h'
+    })
+  },
+  getFind: function () {
+    this.setData({
+      name: 'find'
+    })
+  },
+  getPage:function(){
+    this.setData({
+      name:'page'
+    });
+    var that = this;
+    wx.request({
+      url:'../template/page/weibo.txt',
+      success: function (res) {
+        console.log(res);
+        // that.setData({
+        //   list: date
+        // })
+      },
+      fail: function () {
+        console.log("接口调用失败");
+      }
     })
   },
   getUserInfo: function(e) {

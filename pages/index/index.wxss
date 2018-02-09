@@ -1,6 +1,7 @@
 /**index.wxss**/
 @import "../template/takefood/takefood.wxss";
 @import "../template/find/find.wxss";
+@import "../template/page/page.wxss";
 
 
 .userinfo {

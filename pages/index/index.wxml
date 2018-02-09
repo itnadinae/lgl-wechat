@@ -1,16 +1,16 @@
 <!--index.wxml-->
-<!-- <import src="../template/takefood/takefood.wxml"/> -->
+<import src="../template/takefood/takefood.wxml"/>
 <import src="../template/find/find.wxml"/>
+<import src="../template/page/page.wxml"/>
 
 <view class="container">
-  <!-- <template is="{{name}}" data="{{...item}}"></template> -->
-  <template is="{{name}}"></template>
+  <template is="{{name}}" data="{{...item}}"></template>
   <view class="table">
     <view bindtap='getMoto'>
       <image src='../img/moto.png'></image>
       <text>外卖</text>
     </view>
-      <view bindtap='getFind'>
+    <view bindtap='getFind'>
       <image src='../img/find.png'></image>
       <text>发现外卖</text>
     </view>

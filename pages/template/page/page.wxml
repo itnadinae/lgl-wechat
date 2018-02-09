@@ -1,0 +1,7 @@
+<template name="page">
+  <scroll-view>
+    <view>
+      
+    </view>
+  </scroll-view>
+</template>

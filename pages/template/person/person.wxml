@@ -1,0 +1,16 @@
+<template name="person">
+  <scroll-view>
+    <view>
+      <view>
+        <image src=""></image>
+      </view>
+      <view>
+        <view>西门吹雪</view>
+        <view>
+          <image src=""></image>
+          <text>13511113333</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</template>

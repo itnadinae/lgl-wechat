@@ -2,6 +2,7 @@
 <import src="../template/takefood/takefood.wxml"/>
 <import src="../template/find/find.wxml"/>
 <import src="../template/page/page.wxml"/>
+<import src="../template/person/person.wxml"/>
 
 <view class="container">
   <template is="{{name}}" data="{{...item}}"></template>

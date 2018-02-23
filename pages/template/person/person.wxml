@@ -1,16 +1,49 @@
 <template name="person">
-  <scroll-view>
-    <view>
-      <view>
-        <image src=""></image>
+  <scroll-view class="box">
+    <view class="person">
+      <view class="photo">
+        <image src="../img/person.jpg"></image>
       </view>
-      <view>
+      <view class="name">
         <view>西门吹雪</view>
         <view>
-          <image src=""></image>
+          <image src="../img/phone.png"></image>
           <text>13511113333</text>
         </view>
       </view>
     </view>
+    <view class="property">
+      <view class="redbag">
+        <view class="top">
+          <text class="two">2</text>
+          <text>个</text>
+        </view>
+        <view>红包</view>
+      </view>
+      <view class="gold">
+        <view class="top">
+          <text class="two">8</text>
+          <text>个</text>
+        </view>
+        <view>金币</view>
+      </view>
+    </view>
+    <view class="address">
+      <image src="../img/address.png"></image>
+      <text>我的地址</text>
+    </view>
+    <view class="address">
+      <image src="../img/service.png"></image>
+      <text>分享那五元现金</text>
+    </view>
+    <view class="address service">
+      <image src="../img/gold.png"></image>
+      <text>金币商城</text>
+    </view>
+    <view class="address">
+      <image src="../img/address.png"></image>
+      <text>下载饿了么APP</text>
+    </view>
+
   </scroll-view>
 </template>

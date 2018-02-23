@@ -16,10 +16,14 @@
     <swiper indicator-dots='true' autoplay='true' interval='5000' class="iconSlide">
       <block wx:for="{{iconSlide}}" wx:for-item="item" wx:key="id">
         <swiper-item style="padding-bottom:10px;">
-          <view wx:for="{{item}}" wx:for-item="list" wx:key="id" class="singleItem">
-            <image src="{{list.img}}"></image>
-            <text>{{list.text}}</text>
-          </view>
+        <!--设置路由  -->
+          <navigator url="/pages/route/route">
+            <view wx:for="{{item}}" wx:for-item="list" wx:key="id" class="singleItem">
+              <image src="{{list.img}}"></image>
+              <text>{{list.text}}</text>
+            </view>
+          </navigator>
+          <!--设置路由  -->
         </swiper-item>
       </block>
     </swiper>

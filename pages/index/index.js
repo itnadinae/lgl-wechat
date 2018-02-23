@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    name:'page',
+    name:'person',
     item: {
       mapName: '点击进行定位2',
       imgUrl: [
@@ -248,6 +248,11 @@ Page({
   getFind: function () {
     this.setData({
       name: 'find'
+    })
+  },
+  getPerson: function () {
+    this.setData({
+      name: 'person'
     })
   },
   getPage:function(){

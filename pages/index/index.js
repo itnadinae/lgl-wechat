@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    name:'person',
+    name:'h',
     item: {
       mapName: '点击进行定位2',
       imgUrl: [

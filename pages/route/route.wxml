@@ -1,0 +1,19 @@
+<view class="route">
+  <scroll-view>
+    <view class="top">
+      <view></view>
+      <image src="../img/restrant.png"></image>
+    </view>
+    <view class="content">
+      <view class="name">
+        港岛记（北京崇文门店）
+      </view>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view>
+    </view>
+  </scroll-view>
+</view>

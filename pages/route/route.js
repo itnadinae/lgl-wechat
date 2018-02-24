@@ -12,7 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setNavigationBarTitle({
+      title: '餐厅1',
+    });
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#000',
+    });
   },
 
   /**

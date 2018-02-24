@@ -1,0 +1,48 @@
+.route .top{
+  height:255rpx;
+}
+.route .top view{
+  width:100%;
+  height:200rpx;
+  background:#bd3e3e;
+}
+.route .top image{
+  width:150rpx;
+  height:150rpx;
+  position:absolute;
+  left:50%;
+  margin-left:-75rpx;
+  bottom:20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

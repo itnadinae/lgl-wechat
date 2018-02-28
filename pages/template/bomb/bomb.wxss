@@ -1,0 +1,83 @@
+.bomb .bombMask{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:#333;
+  opacity:0.7;
+}
+.bomb .bombCont{
+  width:94%;
+  height:700rpx;
+  background:#fff;
+  position:absolute;
+  top:50%;
+  left:3%;
+  margin-top:-380rpx;
+  border-radius:10rpx;
+}
+.bomb .bombCont .bombTop{
+  text-align:center;
+  padding-top:20rpx;
+  font-size:26rpx;
+  color:#000;
+}
+.bomb .bombCont .bombTop .title{
+  font-size:50rpx;
+}
+.bomb .bombCont .bombTop .flex{
+  display:flex;
+  justify-content: space-around;
+  margin-top:30rpx;
+}
+.bomb .bombCont .bombTop .flex view view:first-child{
+  font-size:32rpx;
+}
+.bomb .bombCont .bombTop .flex view view:last-child{
+  color:#8c8c8c;
+  margin-top:10rpx;
+}
+.bomb .bombCont .bombTop .bombTip{
+  margin-top:40rpx;
+  font-size:32rpx;
+}
+.bomb .bombCont .bombTop .bombText{
+  width:80%;
+  margin: 20rpx auto 0;
+  text-align: left;
+  line-height:50rpx;
+}
+.bomb .bombCont .bottom{
+  width:60rpx;
+  height:60rpx;
+  position:absolute;
+  left:50%;
+  margin-left:-30rpx;
+  bottom:-80rpx;
+}
+.bomb .bombCont .bottom image{
+  width:100%;
+  height:100%;
+}
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

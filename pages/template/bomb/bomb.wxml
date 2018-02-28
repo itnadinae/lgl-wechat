@@ -1,0 +1,41 @@
+<template name="bomb">
+    <view class="bomb">
+      <view class="bombMask"></view>
+      <view class="bombCont">
+        <view class="bombTop">
+          <view class="title">港岛记（北京崇文门店）</view>
+          <view class="flex">
+            <view>
+              <view>4.6</view>
+              <view>评分</view>
+            </view>
+            <view>
+              <view>2653单</view>
+              <view>月售</view>
+            </view>
+            <view>
+              <view>蜂鸟转送</view>
+              <view>约40分钟</view>
+            </view>
+            <view>
+              <view>6元</view>
+              <view>配送费</view>
+            </view>
+            <view>
+              <view>2.3km</view>
+              <view>距离</view>
+            </view>
+          </view>
+          <view class="bombTip">
+            <text>公告</text>
+          </view>
+          <view class='bombText'>
+            <text>小马哥金牌卤肉饭源自台湾配方，选用上等带膘五花肉经过5小时慢火熬制。我们把特色和地道的台湾味道呈现在您的面前，希望在快节奏的都市生活通过我们的食品能让您感受到一份来自宝岛的浓浓情意和问候。</text>
+          </view>
+        </view>
+        <view class="bottom" bindtap='closeBomb'>
+          <image src="../img/fork.png"></image>
+        </view>
+      </view>
+    </view>
+</template>

@@ -1,3 +1,6 @@
+<import src="../template/bomb/bomb.wxml"/>
+
+
 <view class="route">
   <scroll-view>
     <view class="top">
@@ -5,15 +8,898 @@
       <image src="../img/restrant.png"></image>
     </view>
     <view class="content">
-      <view class="name">
-        港岛记（北京崇文门店）
+      <view bindtap='showInfo'>
+        <view class="name">
+          <view>
+            港岛记（北京崇文门店）
+          </view>
+          <image src="../img/right.png"></image>
+        </view>
+        <view class="mess">
+          <text>4.7</text>
+          <text>月售624单</text>
+          <text>蜂鸟配送</text>
+          <text>约30分钟</text>
+          <text>2.6km</text>
+        </view>
+        <view class="aboRes">小马哥金牌卤肉饭源自台湾配方，选用上等带膘五花肉经过5小时慢火熬制。我们把特色和地道的台湾味道呈现在您的面前，希望在快节奏的都市生活通过我们的食品能让您感受到一份来自宝岛的浓浓情意和问候。</view>
       </view>
-      <view></view>
-      <view></view>
-      <view></view>
-      <view></view>
+      <view class="discount" bindtap='openDisc'>
+        <view class="title">
+          <text>满减</text>
+          <text>满30减10，满45减15，满60减30</text>
+        </view>
+        <view>
+          <text>两个优惠</text>
+          <image src="../img/load.png"></image>
+        </view>
+      </view>
     </view>
-    <view>
+    <view class="tab">
+      <view class="{{currentTab == 0 ? 'on' : ''}}" bindtap='changeCurrent' data-current="0">点餐</view>
+      <view class="{{currentTab == 1 ? 'on' : ''}}" bindtap='changeCurrent' data-current="1">评价</view>
+      <view class="{{currentTab == 2 ? 'on' : ''}}" bindtap='changeCurrent' data-current="2">商家</view>
     </view>
+    <swiper bindchange='changeNav' current="{{currentTab}}" class="swiperBox" duration="500" style="height:{{height}}rpx">
+      <swiper-item>
+        <view class="orderEat">
+          <view class="food">
+            <view class="{{iNow == 0 ? 'alive' : ''}}"  data-current="0" bindtap='changeiNow'>【由氏】营养经典套餐</view>
+            <view class="{{iNow == 1 ? 'alive' : ''}}"  data-current="1" bindtap='changeiNow'>【由氏】单人套餐系列</view>
+            <view class="{{iNow == 2 ? 'alive' : ''}}"  data-current="2" bindtap='changeiNow'>【由氏】素菜每份50克哦</view>
+            <view class="{{iNow == 3 ? 'alive' : ''}}"  data-current="3" bindtap='changeiNow'>【由氏】菌类每份50克</view>
+            <view class="{{iNow == 4 ? 'alive' : ''}}"  data-current="4" bindtap='changeiNow'>【由氏】荤菜每份50克</view>
+            <view class="{{iNow == 5 ? 'alive' : ''}}"  data-current="5" bindtap='changeiNow'>【由氏】精品荤每份50克哦</view>
+            <view class="{{iNow == 6 ? 'alive' : ''}}"  data-current="6" bindtap='changeiNow'>【由氏】三生三世情侣套餐</view>
+            <view class="{{iNow == 7 ? 'alive' : ''}}"  data-current="7" bindtap='changeiNow'>【由氏】特别提示</view>
+            <view class="{{iNow == 8 ? 'alive' : ''}}"  data-current="8" bindtap='changeiNow'>【由氏】圣诞超值</view>
+          </view>
+          <swiper bindchange='changeTab' current="{{iNow}}" duration="200" class="swiperFood" vertical='true' style="height:1300rpx">
+            <swiper-item>
+              <view class="survey" bindtap="choseFood">
+                <view class="foodImg">
+                  <image src="../img/wl.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl11.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl3.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl5.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl4.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl3.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl1.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl6.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl11.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl10.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl9.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl1.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl3.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl4.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl5.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl6.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl6.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl5.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl4.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl3.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl9.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl10.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl11.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl10.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl9.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl4.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl6.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl5.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl4.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl11.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl3.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl2.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl11.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl10.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl9.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl8.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+              <view class="survey">
+                <view class="foodImg">
+                  <image src="../img/wl7.jpeg"></image>
+                </view>
+                <view class="foodInfo">
+                  <view class="wl">微辣+</view>
+                  <view class="order">月售500份，好评率96%</view>
+                  <view class="price">
+                    <text>￥4元起</text>
+                    <text>选规格</text>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+          </swiper>
+        </view>
+      </swiper-item>
+      <swiper-item style="height:800rpx;">
+        <view class="evaluate">
+          <view class="evaBox">
+            <view class='left'>
+              <view>4.9</view>
+              <view class="center">综合评价</view>
+              <view>高于周边86.3%的商家</view>
+            </view>
+            <view class="right">
+              <view>
+                <text>服务态度</text>
+                <text>4.7</text>
+              </view>
+              <view>
+                <text>菜品评价</text>
+                <text>4.5</text>
+              </view>
+              <view>
+                <text>送达时间</text>
+                <text>40分钟</text>
+              </view>
+            </view>
+          </view> 
+          <view class="hr"></view>
+          <view class="noEva">暂无评价~~</view>
+        </view>
+      </swiper-item>
+      <swiper-item style="height:400rpx;">
+        <view class="business">
+          <view class="express">
+            <view>配送信息</view>
+            <view class="expressInfo">
+              <text>蜂鸟专送</text>
+              <text>约26分钟，距离约962m</text>
+            </view>
+            <view>配送费￥5</view>
+          </view>
+          <view class="hr"></view>
+          <view class="active">
+            <view>
+              <text class="mj">满减</text>
+              <text>满100减1分，满200减2分，满300减3分</text>
+            </view>
+            <view>
+              <text class="zk">折扣</text>
+              <text>没有折扣，全部原价，爱买不买</text>
+            </view>
+            <view>
+              <text class="sd">首单</text>
+              <text>首单也不减，就是没优惠</text>
+            </view>
+            <view>
+              <text class="tj">特价</text>
+              <text>没有特价，全部原价</text>
+            </view>
+            <view>
+              <text class="fq">返券</text>
+              <text>没有返券，没有返券，没有返券</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
   </scroll-view>
+  <view class="disMask" hidden="{{view ? true : false}}">
+    <view class="mask"></view>
+    <view class="list">
+      <view class="title">
+        优惠活动
+      </view>
+      <view class="cont">
+        <view>
+          <text>满减</text>
+          <text>满30减10，满45减15，满60减30</text>
+        </view>
+        <view>
+          <text>返券</text>
+          <text>下单可返2元代金券</text>
+        </view>
+        <view>
+          <text>首单</text>
+          <text>满30减10，满45减15，满60减30</text>
+        </view>
+      </view>
+      <view class="close" bindtap="closeDisc">X</view>
+    </view>
+  </view>
+  <view hidden="{{ flag ? true : false}}">
+    <template is="{{name}}"></template>
+  </view>
+  <view class="buyCar">
+    <view class="buyList">
+      <view class="img">
+        <image src='../img/buyCar.png'></image>
+      </view>
+      <view class="distribution">
+        <view>￥{{price}}</view>
+        <view>免配送费</view>
+      </view>
+    </view>
+    <view class="checkOut1">{{checkOut}}</view>
+  </view>
+  <view class="buyMask"></view>
+  <view class="win">
+    <view class="winMask"></view>
+    <view class="winCon">
+      <view class="top">
+        <text>微辣</text>
+        <text>X</text>
+      </view>
+      <view class="center">
+        <view>规格</view>
+        <view>
+          <text>微辣+</text>
+          <text>微辣++</text>
+          <text>微辣+++</text>
+        </view>
+      </view>
+      <view class="bottom">
+        <text>￥4</text>
+        <text>选好了</text>
+      </view>
+    </view>
+  </view>
 </view>

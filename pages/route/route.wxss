@@ -1,5 +1,8 @@
+@import "../template/bomb/bomb.wxss";
+
 .route .top{
   height:255rpx;
+  position:relative;
 }
 .route .top view{
   width:100%;
@@ -14,22 +17,352 @@
   margin-left:-75rpx;
   bottom:20rpx;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.route .content .name{
+  width:64%;
+  overflow:hidden;
+  margin: 0 auto;
+}
+.route .content .name view{
+  float:left;
+  font-size:40rpx;
+}
+.route .content .name image{
+  width:40rpx;
+  height:40rpx;
+  float:left;
+  margin-top:6rpx;
+}
+.route .content .mess{
+  display:flex;
+  justify-content: space-around;
+  width:70%;
+  margin: 18rpx auto 0;
+  font-size: 24rpx;
+}
+.route .content .aboRes{
+  width:60%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  margin: 10rpx auto 0;
+  font-size:24rpx;
+  color:#808080;
+}
+.route .content .discount{
+  display: flex;
+  justify-content:space-between;
+  font-size:24rpx;
+  width:80%;
+  margin:40rpx auto 0;
+}
+.route .content .discount .title text:first-child{
+  background:#ff0000;
+  color:#fff;
+  margin-right:10rpx;
+}
+.route .content .discount view image{
+  width: 20rpx;
+  height:20rpx;
+  margin-left:10rpx;
+}
+.route .disMask .mask{
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:#333;
+  opacity:0.7;
+  z-index:10;
+}
+.route .disMask .list{
+  width:100%;
+  height:500rpx;
+  position: absolute;
+  bottom:0;
+  left:0;
+  background:#fff;
+  z-index:11;
+}
+.route .disMask .title{
+  margin-top:20px;
+  text-align:center;
+  font-size:40rpx;
+}
+.route .disMask .cont{
+  width:80%;
+  margin:20rpx auto 0;
+  font-size: 32rpx;
+}
+.route .disMask .cont view text:first-child{
+  background:#ff0000;
+  color:#fff;
+  margin-right: 10rpx;
+}
+.route .disMask .cont view{
+  margin-top:20rpx;
+}
+.route .disMask .list .close{
+  position:absolute;
+  top:20rpx;
+  right: 30rpx;
+  font-size:40rpx;
+}
+.route .tab{
+  display:flex;
+  justify-content:space-around;
+  font-size:32rpx;
+  margin-top:30rpx;
+  border-bottom:6rpx solid #eee;
+}
+.route .tab view{
+  padding:6rpx 8rpx;
+  margin-bottom:-4rpx;
+}
+.on{
+  color:#333;
+  border-bottom:6rpx solid #2395ff;
+  font-weight:bold;
+  font-size:36rpx;
+}
+.route .swiperBox .express view:first-child{
+  font-size:32rpx;
+  font-weight:bold;
+}
+.route .swiperBox .express{
+  font-size:24rpx;
+  margin:30rpx auto 0;
+  width:90%;
+  padding-bottom:30rpx;
+}
+.route .swiperBox .express .expressInfo{
+  margin:20rpx 0;
+}
+.route .swiperBox .express .expressInfo text:first-child{
+  background:#0097ff;
+  color:#fff;
+  border-radius:6rpx;
+  padding:6rpx 10rpx;
+  margin-right:10rpx;
+}
+.hr{
+  height:20rpx;
+  width:100%;
+  background:#eee;
+}
+.route .swiperBox .business .active{
+  width:90%;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  font-size:30rpx;
+}
+.route .swiperBox .business .active view{
+  margin-bottom:18rpx;
+}
+.route .swiperBox .business .active view text:first-child{
+  color:#fff;
+  background:#0097ff;
+  border-radius:6rpx;
+  padding:4rpx 10rpx;
+  margin-right:10rpx;
+}
+.route .swiperBox .business .active view text.zk{
+  background:#f90;
+}
+.route .swiperBox .business .active view text.tj{
+  background:#ff0000;
+}
+.route .swiperBox .business .active view text.sd{
+  background:#bd3e3e;
+}
+.route .swiperBox .evaluate .evaBox{
+  width:90%;
+  margin: 30rpx auto 0;
+  overflow:hidden;
+}
+.route .swiperBox .evaluate .evaBox .left{
+  border-right:2rpx solid #808080;
+}
+.route .swiperBox .evaluate .evaBox .left view:first-child{
+  font-size:40rpx;
+  color:#ff6000;
+}
+.route .swiperBox .evaluate .evaBox .left,.route .swiperBox .evaluate .evaBox .right{
+  width:44%;
+  float:left;
+}
+.route .swiperBox .evaluate .evaBox .right{
+  font-size:28rpx;
+  padding:12rpx 0 0 40rpx;
+}
+.route .swiperBox .evaluate .evaBox .right view{
+  margin-bottom:24rpx;
+}
+.route .swiperBox .evaluate .evaBox .left view:last-child{
+  font-size:28rpx;
+}
+.route .swiperBox .evaluate .evaBox .left view.center{
+  margin: 16rpx 0;
+}
+.route .swiperBox .evaluate .evaBox .right view text:first-child{
+  margin-right:40rpx;
+}
+.route .swiperBox .evaluate .noEva{
+  font-size:42rpx;
+  color:#c2c2c2;
+  text-align:center;
+  padding-top:200rpx;
+}
+.route .swiperBox .food{
+  font-size:26rpx;
+  background:#f8f8f8;
+  width:180rpx;
+}
+.route .swiperBox .food view{
+  border-bottom:2rpx solid #e8e8e8;
+  width:142rpx;
+  padding:20rpx;
+}
+.route .swiperBox .orderEat{
+  display:flex;
+  justify-content: space-between;
+}
+.alive{
+  background:#fff;
+}
+.route .swiperBox .orderEat .swiperFood{
+  width:80%;
+}
+.route .swiperBox .orderEat .swiperFood .survey{
+  overflow:hidden;
+  margin: 20rpx 0;
+}
+.route .swiperBox .orderEat .swiperFood .foodImg image{
+  width:150rpx;
+  height:150rpx;
+  float:left;
+}
+.route .swiperBox .orderEat .swiperFood .foodInfo{
+  float:left;
+  margin-left:30rpx;
+  width:60%;
+}
+.route .swiperBox .orderEat .swiperFood .foodInfo .wl{
+  font-size:32rpx;
+  font-weight:bold;
+}
+.route .swiperBox .orderEat .swiperFood .foodInfo .order{
+  font-size:24rpx;
+  color:#666;
+  margin-top:16rpx;
+}
+.route .swiperBox .orderEat .swiperFood .foodInfo .price{
+  display:flex;
+  color:#f60;
+  font-size:30rpx;
+  margin-top:40rpx;
+  justify-content:space-between;
+}
+.route .swiperBox .orderEat .swiperFood .foodInfo .price text:last-child{
+  color:#fff;
+  background:#3199e8;
+  padding:10rpx 20rpx;
+  border-radius:10rpx;
+  margin-top:-14rpx;
+}
+.route .buyCar{
+  background:rgba(61,61,63,.9);
+  position:fixed;
+  bottom:0;
+  left:0;
+  height:100rpx;
+  width:100%;
+}
+.route .buyCar .buyList{
+  width:65%;
+  float:left;
+}
+.route .buyCar .buyList .img{
+  width:80rpx;
+  height:80rpx;
+  border-radius:50%;
+  overflow:hidden;
+  text-align:center;
+  background: radial-gradient(circle,#363636 6.266667vw,#444 0);
+  margin-top:-20rpx;
+  position:absolute;
+  left:80rpx;
+  top:0;
+}
+.route .buyCar .buyList image{
+  width:60rpx;
+  height:60rpx;
+  margin-top:10rpx;
+  border-radius:50%;
+}
+.route .buyCar .buyList .distribution{
+  position:absolute;
+  left:260rpx;
+  top:10rpx;
+  color:#fff;
+  font-size:36rpx;
+}
+.route .buyCar .buyList .distribution view:last-child{
+  font-size:24rpx;
+  color:#999;
+}
+.route .buyCar .checkOut{
+  float:right;
+  background:#4cd964;
+  color:#fff;
+  font-size:32rpx;
+  line-height:100rpx;
+  text-align:center;
+  padding: 0 40rpx;
+}
+.route .buyCar .checkOut1{
+  float:right;
+  color:#fff;
+  font-size:32rpx;
+  line-height:100rpx;
+  text-align:center;
+  padding: 0 40rpx;
+}
+.route .win .winMask{
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:#333;
+  opacity:0.7;
+  z-index:10;
+}
+.route .win .winCon{
+  width:90%;
+  height:400rpx;
+  position:absolute;
+  z-index:11;
+  top:50%;
+  left:5%;
+  margin-top:-200rpx;
+  background:#fff;
+  border-radius:20rpx;
+}
+.route .win .winCon .top{
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+}
+.route .win .winCon .top text:last-child{
+  position: absolute;
+  top: -10rpx;
+  right:60rpx;
+}
+.route .win .winCon .center{
+  text-align:center;
+  font-size:26rpx;
+}
 
 
 

@@ -1,8 +1,8 @@
 <import src="../template/bomb/bomb.wxml"/>
 
 
-<view class="route">
-  <scroll-view>
+<view class="route" style="height:{{winH}}px;overflow:hidden;">
+  <scroll-view style="height:100%;">
     <view class="top">
       <view></view>
       <image src="../img/restrant.png"></image>
@@ -69,7 +69,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -82,7 +82,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -95,7 +95,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl11.jpeg"></image>
                 </view>
@@ -108,7 +108,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -121,7 +121,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl3.jpeg"></image>
                 </view>
@@ -136,7 +136,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl5.jpeg"></image>
                 </view>
@@ -149,7 +149,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl4.jpeg"></image>
                 </view>
@@ -162,7 +162,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl3.jpeg"></image>
                 </view>
@@ -175,7 +175,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -188,7 +188,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl1.jpeg"></image>
                 </view>
@@ -201,7 +201,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl6.jpeg"></image>
                 </view>
@@ -216,7 +216,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -229,7 +229,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl11.jpeg"></image>
                 </view>
@@ -242,7 +242,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl10.jpeg"></image>
                 </view>
@@ -255,7 +255,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl9.jpeg"></image>
                 </view>
@@ -268,7 +268,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -281,7 +281,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -296,7 +296,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl1.jpeg"></image>
                 </view>
@@ -309,7 +309,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -322,7 +322,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl3.jpeg"></image>
                 </view>
@@ -335,7 +335,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl4.jpeg"></image>
                 </view>
@@ -348,7 +348,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl5.jpeg"></image>
                 </view>
@@ -361,7 +361,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl6.jpeg"></image>
                 </view>
@@ -376,7 +376,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -389,7 +389,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl6.jpeg"></image>
                 </view>
@@ -402,7 +402,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl5.jpeg"></image>
                 </view>
@@ -415,7 +415,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl4.jpeg"></image>
                 </view>
@@ -428,7 +428,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl3.jpeg"></image>
                 </view>
@@ -441,7 +441,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -456,7 +456,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl9.jpeg"></image>
                 </view>
@@ -469,7 +469,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl10.jpeg"></image>
                 </view>
@@ -482,7 +482,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl11.jpeg"></image>
                 </view>
@@ -495,7 +495,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl10.jpeg"></image>
                 </view>
@@ -508,7 +508,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl9.jpeg"></image>
                 </view>
@@ -521,7 +521,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -536,7 +536,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl4.jpeg"></image>
                 </view>
@@ -549,7 +549,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl6.jpeg"></image>
                 </view>
@@ -562,7 +562,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl5.jpeg"></image>
                 </view>
@@ -575,7 +575,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl4.jpeg"></image>
                 </view>
@@ -588,7 +588,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -601,7 +601,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -616,7 +616,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl.jpeg"></image>
                 </view>
@@ -629,7 +629,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -642,7 +642,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -655,7 +655,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl11.jpeg"></image>
                 </view>
@@ -668,7 +668,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -681,7 +681,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl3.jpeg"></image>
                 </view>
@@ -696,7 +696,7 @@
               </view>
             </swiper-item>
             <swiper-item>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl2.jpeg"></image>
                 </view>
@@ -709,7 +709,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl11.jpeg"></image>
                 </view>
@@ -722,7 +722,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl10.jpeg"></image>
                 </view>
@@ -735,7 +735,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl9.jpeg"></image>
                 </view>
@@ -748,7 +748,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl8.jpeg"></image>
                 </view>
@@ -761,7 +761,7 @@
                   </view>
                 </view>
               </view>
-              <view class="survey">
+              <view class="survey" bindtap="choseFood">
                 <view class="foodImg">
                   <image src="../img/wl7.jpeg"></image>
                 </view>
@@ -842,7 +842,7 @@
       </swiper-item>
     </swiper>
   </scroll-view>
-  <view class="disMask" hidden="{{view ? true : false}}">
+  <view class="disMask" hidden="{{view}}">
     <view class="mask"></view>
     <view class="list">
       <view class="title">
@@ -865,7 +865,7 @@
       <view class="close" bindtap="closeDisc">X</view>
     </view>
   </view>
-  <view hidden="{{ flag ? true : false}}">
+  <view hidden="{{ flag }}">
     <template is="{{name}}"></template>
   </view>
   <view class="buyCar">
@@ -881,24 +881,44 @@
     <view class="checkOut1">{{checkOut}}</view>
   </view>
   <view class="buyMask"></view>
-  <view class="win">
+  <view class="win" hidden="{{view1}}">
     <view class="winMask"></view>
     <view class="winCon">
       <view class="top">
         <text>微辣</text>
-        <text>X</text>
+        <text bindtap='closeFood'>X</text>
       </view>
       <view class="center">
         <view>规格</view>
         <view>
-          <text>微辣+</text>
-          <text>微辣++</text>
-          <text>微辣+++</text>
+          <text class="{{ flavor == 0 ? 'flavor' : ''}}" bindtap='choseFlavor' data-current="0" data-prise="4" data-text="微辣+">微辣+</text>
+          <text class="{{ flavor == 1 ? 'flavor' : ''}}" bindtap='choseFlavor' data-current="1" data-prise="6" data-text="微辣++">微辣++</text>
+          <text class="{{ flavor == 2 ? 'flavor' : ''}}" bindtap='choseFlavor' data-current="2" data-prise="8" data-text="微辣+++">微辣+++</text>
         </view>
       </view>
       <view class="bottom">
-        <text>￥4</text>
-        <text>选好了</text>
+        <text>￥{{money}}</text>
+        <text bindtap='makeSure'>选好了</text>
+      </view>
+    </view>
+  </view>
+  <view class="menu" hidden="{{view2}}">
+    <view class="mask"></view>
+    <view class="menuList">
+      <view class="mallInfo">
+        <text>已选商品</text>
+        <text>清空</text>
+      </view>
+      <view class="list">
+        <!-- <block wx:for="{{foodArr}}" wx:key="id"> -->
+          <view>
+            <text>111</text>
+            <text>222</text>
+            <text>-</text>
+            <text>333</text>
+            <text>+</text>
+          </view>
+        <!-- </block> -->
       </view>
     </view>
   </view>

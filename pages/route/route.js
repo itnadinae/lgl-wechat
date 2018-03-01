@@ -8,11 +8,21 @@ Page({
     name:'bomb',
     flag:true,
     view:true,
+    view1:true,
+    view2:false,
+    winH:'',
     currentTab:0,
     height:1200,
     iNow:0,
     price:0,
-    checkOut:'￥35起送'
+    checkOut:'￥35起送',
+    flavor:'0',
+    total:0,
+    money:4,
+    text:'微辣+',
+    foodArr:[],
+    mount:0,
+    isScroll:true
   },
   /***
    * 选项卡1
@@ -67,31 +77,105 @@ Page({
    */
   choseFood:function(){
     var that = this;
-    console.log(1)
+    that.setData({
+      view1: false 
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: res.windowHeight
+        });
+      }
+    })
+  },
+  closeFood:function(){
+    var that = this;
+    that.setData({
+      view1:true
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH:''
+        });
+      }
+    })
+  },
+  choseFlavor:function(e){
+    this.setData({
+      flavor: e.currentTarget.dataset.current,
+      money: e.currentTarget.dataset.prise,
+      text: e.currentTarget.dataset.text
+    });
+
   },
   /**
    * 判断显示隐藏
    */
   showInfo:function(){
-    this.setData({
+    var that = this;
+    that.setData({
       flag:false
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: res.windowHeight
+        });
+      }
     })
   },
   closeBomb:function(){
-    this.setData({
+    var that = this;
+    that.setData({
       flag: true
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: ''
+        });
+      }
     })
   },
 
   openDisc:function(){
-    this.setData({
+    var that = this;
+    that.setData({
       view:false
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: res.windowHeight
+        });
+      }
     })
   },
   closeDisc:function(){
-    this.setData({
+    var that = this;
+    that.setData({
       view:true
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: res.windowHeight
+        });
+      }
     })
+  },
+  /**
+   * 点餐
+   */
+  makeSure:function(e){
+    var arr = [{ name1: this.data.text, name2: this.data.money }];
+    this.data.foodArr = arr.concat(this.data.foodArr)
+    this.setData({
+      foodArr:this.data.foodArr,
+      view1:true
+    })
+    console.log(this.data.foodArr)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -105,7 +189,7 @@ Page({
       backgroundColor: '#000',
     });
   },
-
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

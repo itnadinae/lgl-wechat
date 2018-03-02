@@ -868,17 +868,17 @@
   <view hidden="{{ flag }}">
     <template is="{{name}}"></template>
   </view>
-  <view class="buyCar">
+  <view class="buyCar" bindtap="showFood">
     <view class="buyList">
       <view class="img">
-        <image src='../img/buyCar.png'></image>
+        <image src='{{imgSrc}}'></image>
       </view>
       <view class="distribution">
-        <view>￥{{price}}</view>
+        <view>￥{{total}}</view>
         <view>免配送费</view>
       </view>
     </view>
-    <view class="checkOut1">{{checkOut}}</view>
+    <view class="{{claName}}">{{checkOut}}</view>
   </view>
   <view class="buyMask"></view>
   <view class="win" hidden="{{view1}}">
@@ -903,22 +903,24 @@
     </view>
   </view>
   <view class="menu" hidden="{{view2}}">
-    <view class="mask"></view>
+    <view class="mask" bindtap='hideFood'></view>
     <view class="menuList">
       <view class="mallInfo">
         <text>已选商品</text>
-        <text>清空</text>
+        <text bindtap="empty">清空</text>
       </view>
       <view class="list">
-        <!-- <block wx:for="{{foodArr}}" wx:key="id"> -->
-          <view>
-            <text>111</text>
-            <text>222</text>
-            <text>-</text>
-            <text>333</text>
-            <text>+</text>
+         <block wx:for="{{foodArr}}" wx:key="id">
+          <view class="listCon">
+            <text>{{item.name1}}</text>
+            <text>￥{{item.name2}}</text>
+            <view class="symbol">
+              <text class="reduce">-</text>
+              <text>1</text>
+              <text class="add">+</text>
+            </view>
           </view>
-        <!-- </block> -->
+        </block> 
       </view>
     </view>
   </view>

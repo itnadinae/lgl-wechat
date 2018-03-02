@@ -320,6 +320,7 @@
   line-height:100rpx;
   text-align:center;
   padding: 0 40rpx;
+  width:146rpx;
 }
 .route .buyCar .checkOut1{
   float:right;
@@ -328,6 +329,7 @@
   line-height:100rpx;
   text-align:center;
   padding: 0 40rpx;
+  width:146rpx;
 }
 .route .win .winMask{
   position: absolute;
@@ -422,22 +424,55 @@
   bottom:100rpx;
   left:0;
   z-index:11;
+  width:100%;
 }
 .route .menu .menuList .mallInfo{
-  width:100%;
-  background:#666;
+  width:90%;
+  padding:0 5%;
+  background:#eceff1;
   height:100rpx;
+  display:flex;
+  justify-content: space-between;
+}
+.route .menu .menuList .mallInfo text{
+  line-height:100rpx;
 }
 .route .menu .menuList .list{
   background:#fff;
-  position:absolute;
-  bottom:0;
-  left:0;
-  height:100rpx;
+  width:100%;
 }
-
-
-
+.route .menu .menuList .list view.listCon{
+  border-bottom: 2rpx solid #eee;
+  padding:20rpx 40rpx;
+  display:flex;
+  justify-content:space-around;
+}
+.route .menu .menuList .list .symbol text{
+  width:36rpx;
+  height:36rpx;
+  border-radius:20rpx;
+  display:block;
+  text-align:center;
+  line-height:36rpx;
+}
+.route .menu .menuList .list .symbol{
+  display:flex;
+  justify-content: space-between;
+  margin-top:10rpx;
+}
+.route .menu .menuList .list .symbol .reduce{
+  border: 2rpx solid #2395ff;
+  color:#2395ff;
+  font-size:40rpx;
+  line-height:30rpx;
+}
+.route .menu .menuList .list .symbol .add{
+  border: 2rpx solid #2395ff;
+  background:#2395ff;
+  color:#fff;
+  font-size:40rpx;
+  line-height:30rpx;
+}
 
 
 

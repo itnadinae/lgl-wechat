@@ -9,20 +9,22 @@ Page({
     flag:true,
     view:true,
     view1:true,
-    view2:false,
+    view2:true,
     winH:'',
     currentTab:0,
     height:1200,
     iNow:0,
     price:0,
     checkOut:'￥35起送',
+    claName:'checkOut1',
     flavor:'0',
     total:0,
     money:4,
     text:'微辣+',
     foodArr:[],
     mount:0,
-    isScroll:true
+    isScroll:true,
+    imgSrc:'../img/buyCar.png'
   },
   /***
    * 选项卡1
@@ -160,9 +162,53 @@ Page({
     wx.getSystemInfo({
       success: (res) => { // 用这种方法调用，this指向Page
         that.setData({
+          winH: ''
+        });
+      }
+    })
+  },
+  showFood:function(){
+    var that = this;
+    if (this.data.foodArr == '') {
+      that.setData({
+        view2: true
+      })
+    }else{
+      that.setData({
+        view2: false
+      });
+    }
+    
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
           winH: res.windowHeight
         });
       }
+    });
+  },
+  hideFood:function(){
+    var that = this;
+    that.setData({
+      view2:true
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: ''
+        });
+      }
+    })
+  },
+  empty:function(){
+    var that = this;
+    that.setData({
+      foodArr:[],
+      view2:true,
+      checkOut:'￥35起送',
+      claName:'checkOut1',
+      total:0,
+      imgSrc:'../img/buyCar.png'
     })
   },
   /**
@@ -170,12 +216,22 @@ Page({
    */
   makeSure:function(e){
     var arr = [{ name1: this.data.text, name2: this.data.money }];
-    this.data.foodArr = arr.concat(this.data.foodArr)
+    this.data.foodArr = arr.concat(this.data.foodArr);
     this.setData({
       foodArr:this.data.foodArr,
-      view1:true
+      view1:true,
+      checkOut:'结算',
+      claName:'checkOut',
+      imgSrc:'../img/buyCar2.png'
+    });
+    console.log(this.data.foodArr);
+    var number = 0;
+    for (var i = 0; i < this.data.foodArr.length; i++){
+      number += parseInt(this.data.foodArr[i].name2);
+    }
+    this.setData({
+      total:number
     })
-    console.log(this.data.foodArr)
   },
   /**
    * 生命周期函数--监听页面加载

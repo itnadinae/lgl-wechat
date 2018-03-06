@@ -24,7 +24,8 @@ Page({
     foodArr:[],
     mount:0,
     isScroll:true,
-    imgSrc:'../img/buyCar.png'
+    imgSrc:'../img/buyCar.png',
+    iNum:''
   },
   /***
    * 选项卡1
@@ -208,7 +209,15 @@ Page({
       checkOut:'￥35起送',
       claName:'checkOut1',
       total:0,
-      imgSrc:'../img/buyCar.png'
+      imgSrc:'../img/buyCar.png',
+      iNum:'',
+    });
+    wx.getSystemInfo({
+      success: (res) => { // 用这种方法调用，this指向Page
+        that.setData({
+          winH: ''
+        });
+      }
     })
   },
   /**
@@ -217,14 +226,17 @@ Page({
   makeSure:function(e){
     var arr = [{ name1: this.data.text, name2: this.data.money }];
     this.data.foodArr = arr.concat(this.data.foodArr);
+    var quan = this.data.foodArr.length;
+    console.log(quan)
     this.setData({
       foodArr:this.data.foodArr,
       view1:true,
       checkOut:'结算',
       claName:'checkOut',
-      imgSrc:'../img/buyCar2.png'
+      imgSrc:'../img/buyCar2.png',
+      iNum: quan
     });
-    console.log(this.data.foodArr);
+    
     var number = 0;
     for (var i = 0; i < this.data.foodArr.length; i++){
       number += parseInt(this.data.foodArr[i].name2);

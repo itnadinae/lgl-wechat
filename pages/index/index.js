@@ -6,7 +6,11 @@ Page({
   data: {
     name:'h',
     item: {
-      mapName: '点击进行定位2',
+      mapName: '点击进行定位',
+      inputValue:'',
+      view1:true,
+      view2:false,
+      tableData: {},
       imgUrl: [
         {
           id: 1,
@@ -164,8 +168,35 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    mapName:'点击进行定位1',
-   
+    moto:'../img/moto1.png',
+    find:'../img/find.png',
+    page: '../img/page.png',
+    person: '../img/person.png',
+  },
+  keyUp:function(e){
+    this.setData({
+      'item.inputValue': e.detail.value
+    })
+  },
+  searchWether:function(){
+    var that = this;
+    var aliveCity = that.data.item.inputValue;
+    if (aliveCity){
+      wx.request({
+        url: 'http://v.juhe.cn/weather/index',
+        method: 'GET',
+        data: {
+          cityname: aliveCity,
+          key: 'd204f31a93b3dc650e70b2ebf5061488',
+          dtype: 'json'
+        },
+        success: function (res) {
+          that.setData({
+            'item.tableData': res.data.result.today
+          })
+        }
+      })
+    }
   },
   getLoca:function(){
     var that = this;
@@ -206,6 +237,7 @@ Page({
   },
 
   onLoad: function(options) {
+    var that = this;
     wx.setNavigationBarTitle({
       title: '我的个人网站',
     });
@@ -238,40 +270,70 @@ Page({
           })
         }
       })
-    }
+    };
+    wx.request({
+      url: 'http://v.juhe.cn/weather/index',
+      method:'GET',
+      data:{
+        cityname:'北京',
+        key:'d204f31a93b3dc650e70b2ebf5061488',
+        dtype:'json'
+      },
+      success:function(res){
+        that.setData({
+          'item.tableData': res.data.result.today
+        })
+      }
+    });
   },
   getMoto:function(){
     this.setData({
-      name:'h'
+      name:'h',
+      moto:'../img/moto1.png',
+      find:'../img/find.png',
+      page: '../img/page.png',
+      person: '../img/person.png',
     })
   },
   getFind: function () {
     this.setData({
-      name: 'find'
+      name: 'find',
+      find:'../img/find1.png',
+      moto: '../img/moto.png',
+      page: '../img/page.png',
+      person: '../img/person.png',
     })
   },
   getPerson: function () {
     this.setData({
-      name: 'person'
+      name: 'person',
+      person:'../img/person1.png',
+      moto: '../img/moto.png',
+      find: '../img/find.png',
+      page: '../img/page.png',
     })
   },
   getPage:function(){
     this.setData({
-      name:'page'
+      name:'page',
+      page:'../img/page1.png',
+      person: '../img/person.png',
+      moto: '../img/moto.png',
+      find: '../img/find.png',
     });
-    var that = this;
-    wx.request({
-      url:'../template/page/weibo.txt',
-      success: function (res) {
-        console.log(res);
-        // that.setData({
-        //   list: date
-        // })
-      },
-      fail: function () {
-        console.log("接口调用失败");
-      }
-    })
+    // var that = this;
+    // wx.request({
+    //   url:'../template/page/weibo.txt',
+    //   success: function (res) {
+    //     console.log(res);
+    //     // that.setData({
+    //     //   list: date
+    //     // })
+    //   },
+    //   fail: function () {
+    //     console.log("接口调用失败");
+    //   }
+    // })
   },
   getUserInfo: function(e) {
     console.log(e)

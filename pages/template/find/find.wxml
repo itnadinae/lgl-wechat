@@ -57,52 +57,60 @@
       <view class="foryou">为您推荐</view>
       <view class="aboutyou">你的口味我最懂得</view>
       <view class="listbox">
-        <view>
+        <navigator url="/pages/route/route">
           <view>
-            <image src="../img/food1.jpeg" class="cate"></image>
+            <view>
+              <image src="../img/food1.jpeg" class="cate"></image>
+            </view>
+            <view class="name">叉烧腊肠双拼饭</view>
+            <view class="survey">
+              <text class="count">月售500份</text>
+              <text>好评100%</text>
+            </view>
+            <view class="prise">￥19.9</view>
           </view>
-          <view class="name">叉烧腊肠双拼饭</view>
-          <view class="survey">
-            <text class="count">月售500份</text>
-            <text>好评100%</text>
-          </view>
-          <view class="prise">￥19.9</view>
-        </view>
-        <view>
+        </navigator>
+        <navigator url="/pages/route/route">
           <view>
-            <image src="../img/food2.jpeg" class="cate"></image>
+            <view>
+              <image src="../img/food2.jpeg" class="cate"></image>
+            </view>
+            <view class="name">叉烧腊肠双拼饭</view>
+            <view class="survey">
+              <text class="count">月售500份</text>
+              <text>好评100%</text>
+            </view>
+            <view class="prise">￥19.9</view>
           </view>
-          <view class="name">叉烧腊肠双拼饭</view>
-          <view class="survey">
-            <text class="count">月售500份</text>
-            <text>好评100%</text>
-          </view>
-          <view class="prise">￥19.9</view>
-        </view>
+        </navigator>
       </view>
       <view class="listbox">
-        <view>
+        <navigator url="/pages/route/route">
           <view>
-            <image src="../img/food3.jpeg" class="cate"></image>
+            <view>
+              <image src="../img/food3.jpeg" class="cate"></image>
+            </view>
+            <view class="name">叉烧腊肠双拼饭</view>
+            <view class="survey">
+              <text class="count">月售500份</text>
+              <text>好评100%</text>
+            </view>
+            <view class="prise">￥19.9</view>
           </view>
-          <view class="name">叉烧腊肠双拼饭</view>
-          <view class="survey">
-            <text class="count">月售500份</text>
-            <text>好评100%</text>
-          </view>
-          <view class="prise">￥19.9</view>
-        </view>
-        <view>
+        </navigator>
+        <navigator url="/pages/route/route">
           <view>
-            <image src="../img/food4.jpeg" class="cate"></image>
+            <view>
+              <image src="../img/food4.jpeg" class="cate"></image>
+            </view>
+            <view class="name">叉烧腊肠双拼饭</view>
+            <view class="survey">
+              <text class="count">月售500份</text>
+              <text>好评100%</text>
+            </view>
+            <view class="prise">￥19.9</view>
           </view>
-          <view class="name">叉烧腊肠双拼饭</view>
-          <view class="survey">
-            <text class="count">月售500份</text>
-            <text>好评100%</text>
-          </view>
-          <view class="prise">￥19.9</view>
-        </view>
+        </navigator>
       </view>
     </view>
       

@@ -1,7 +1,40 @@
 <template name="page">
   <scroll-view>
-    <view>
-      
+    <view class="search">
+      <view class="choseCity">
+        <input type='text' placeholder='请输入或者选择您所在城市' bindinput='keyUp'/>
+        <button bindtap='searchWether'>查看</button>
+      </view> 
+    </view>
+    <view class="wether">
+      <view>
+        <text>{{tableData.city}}</text>
+        <text>{{tableData.date_y}}</text>
+        <text>{{tableData.week}}</text>
+      </view>
+      <view class="sec">
+        <view>
+          <text>气温</text>
+          <text>{{tableData.temperature}}</text>
+        </view>
+        <view>
+          <text>天气</text>
+          <text>{{tableData.weather}}</text>
+        </view>
+      </view>
+      <view class="thir">
+        <view>
+          <text>风量</text>
+          <text>{{tableData.wind}}</text>
+        </view>
+        <view>
+          <text>气温</text>
+          <text>{{tableData.dressing_index}}</text>
+        </view>
+      </view>
+      <view>
+        <text>{{tableData.dressing_advice}}</text>
+      </view>
     </view>
   </scroll-view>
 </template>

@@ -287,13 +287,23 @@
   width:80rpx;
   height:80rpx;
   border-radius:50%;
-  overflow:hidden;
   text-align:center;
   background: radial-gradient(circle,#363636 6.266667vw,#444 0);
   margin-top:-20rpx;
   position:absolute;
   left:80rpx;
   top:0;
+}
+.route .buyCar .buyList .img .text{
+  position: absolute;
+  top:-4rpx;
+  right:-4rpx;
+  color:#fff;
+  background:#ff6000;
+  width:30rpx;
+  height:30rpx;
+  border-radius:15rpx;
+  font-size:22rpx;
 }
 .route .buyCar .buyList image{
   width:60rpx;

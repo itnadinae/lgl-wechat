@@ -1,0 +1,107 @@
+.search .choseCity{
+  display:flex;
+  justify-content:space-between;
+  width:90%;
+  margin: 100rpx auto;
+}
+.search .choseCity input{
+  border:2rpx solid #0085ff;
+  width:80%;
+  font-size:30rpx;
+  height:70rpx;
+  padding-left:20rpx;
+}
+.search .choseCity button{
+  width:20%;
+  font-size:30rpx;
+  border-radius:0;
+  color:#fff;
+  background:#0085ff;
+}
+.wether{
+  border:2rpx solid #0085ff;
+  width:90%;
+  margin: 0 auto;
+}
+.wether view{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:2rpx solid #0085ff;
+  font-size:32rpx;
+}
+.wether view view{
+  border:none;
+  height:100%;
+  width:50%;
+}
+.wether view view:first-child{
+  border-right:2rpx solid #0085ff;
+}
+.wether view:first-child{
+  padding:20rpx;
+}
+.wether view:last-child{
+  border-bottom:none;
+  padding:20rpx;
+}
+.wether .sec view{
+  padding:0;
+}
+.wether .thir view{
+  padding:0;
+}
+.wether .sec view text:first-child{
+  border-right:2rpx solid #0085ff;
+  padding:20rpx;
+}
+.wether .thir view text:first-child{
+  border-right:2rpx solid #0085ff;
+  padding:20rpx;
+}
+.wether .sec view text:last-child{
+  padding:20rpx 20rpx 0 0;
+}
+.wether .thir view text:last-child{
+  padding:20rpx 20rpx 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

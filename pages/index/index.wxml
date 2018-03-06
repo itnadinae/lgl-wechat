@@ -8,19 +8,19 @@
   <template is="{{name}}" data="{{...item}}"></template>
   <view class="table">
     <view bindtap='getMoto'>
-      <image src='../img/moto.png'></image>
+      <image src='{{moto}}'></image>
       <text>外卖</text>
     </view>
     <view bindtap='getFind'>
-      <image src='../img/find.png'></image>
+      <image src='{{find}}'></image>
       <text>发现外卖</text>
     </view>
      <view bindtap='getPage'>
-      <image src='../img/page.png'></image>
+      <image src='{{page}}'></image>
       <text>订单</text>
     </view>
      <view bindtap='getPerson'>
-      <image src='../img/person.png'></image>
+      <image src='{{person}}'></image>
       <text>我的</text>
     </view> 
   </view>

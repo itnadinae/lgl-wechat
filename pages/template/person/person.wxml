@@ -5,7 +5,7 @@
         <image src="../img/person.jpg"></image>
       </view>
       <view class="name">
-        <view>西门吹雪</view>
+        <view>Number</view>
         <view>
           <image src="../img/phone.png"></image>
           <text>13511113333</text>

@@ -872,6 +872,7 @@
     <view class="buyList">
       <view class="img">
         <image src='{{imgSrc}}'></image>
+        <text class="{{iNum > 0 ? 'text' : ''}}">{{iNum}}</text>
       </view>
       <view class="distribution">
         <view>￥{{total}}</view>

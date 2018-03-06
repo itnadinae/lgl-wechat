@@ -34,24 +34,26 @@
       <text class="business">——  商家推荐  ——</text>
       <view class="list">
         <block wx:for="{{restList}}" wx:key="id">
-          <view class="listItem">
-            <image src="{{item.img}}" class="listImg"></image>
-            <view class="right">
-              <text class="name">{{item.title}}</text>
-              <view class="info">
-                <text>{{item.h2.title1}}</text>
-                <text class="send">{{item.h2.title2}}</text>
+          <navigator url="/pages/route/route">
+            <view class="listItem">
+              <image src="{{item.img}}" class="listImg"></image>
+              <view class="right">
+                <text class="name">{{item.title}}</text>
+                <view class="info">
+                  <text>{{item.h2.title1}}</text>
+                  <text class="send">{{item.h2.title2}}</text>
+                </view>
+                <view class="info prise">
+                    <text>
+                      {{item.postPrise}}
+                    </text>
+                    <text>
+                      {{item.time}}
+                    </text>
+                </view> 
               </view>
-              <view class="info prise">
-                  <text>
-                    {{item.postPrise}}
-                  </text>
-                  <text>
-                    {{item.time}}
-                  </text>
-              </view> 
             </view>
-          </view>
+          </navigator>
         </block>
       </view>
       <view class="endAll">
